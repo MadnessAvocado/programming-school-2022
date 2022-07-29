@@ -24,3 +24,19 @@ public class Main {
         foo.printEvenElements(list);
     }
 }
+
+class Foo {
+    public void printElements(List<Integer> list) {
+        for (int i = 0; i < list.size(); ++i) {
+           System.out.println(list.get(i));
+        }
+    }
+
+    public void printEvenElements(List<Integer> list) {
+        for (int i = 0; i <list.size(); ++i) {
+            if (list.get(i) % 2 == 0) {
+                System.out.println(list.get(i));
+            }
+        }
+    }
+}
