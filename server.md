@@ -77,3 +77,9 @@ cat README.md > ~/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 ### Setup shell in top of `~/.config/tmux/.tmux.conf`. Default is fish
+
+## User creation
+```bash
+sudo useradd -m -c bash <username>
+sudo passwd <username>
+```
