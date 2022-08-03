@@ -20,3 +20,60 @@ Get-Content $env:USERPROFILE\.ssh\id_rsa.pub | ssh <user>@<hostname> "cat >> .ss
 В верхней части списка слева выбираем вкладку `Startup`, и меняем `Default profile` на `programming-school`.
 
 Поздравляю вас с настройкой подключения к серву)
+
+
+# Server settings
+
+## Update
+```bash
+sudo apt-get update && sudo apt-get upgrade
+```
+
+## Installing deps
+```bash
+sudo apt-get install -y openjdk-11-jdk build-essential tmux python3-pip sanpd
+sudo snap install core -y
+sudo snap install nvim -y
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.bashrc
+nvm install 16.16.0 && nvm use default
+```
+
+## Download configs
+```bash
+mkdir ~/.config && cd ~/.config
+git clone https://github.com/usrsem/nvim-template
+git clone https://github.com/usrsem/tmux
+mv nvim-template nvim
+```
+
+## Setting up nvim
+### Install VimPlug
+```bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+pip install neovim
+```
+ 
+### Install plugins
+```bash
+nvim
+:PlugInstall
+```
+
+### Update plugins
+```bash
+nvim
+:UpdateRemotePlugins
+```
+
+## Setting up tmux
+### Setting config
+```bash
+cd ~/.config/tmux
+cat README.md > ~/.tmux.conf
+```
+### Installing plugin manager
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+### Setup shell in top of `~/.config/tmux/.tmux.conf`. Default is fish
