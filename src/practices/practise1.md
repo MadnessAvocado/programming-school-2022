@@ -60,11 +60,6 @@ cd ~/code/programming-school-2022
 cd src/tasks/task2
 ```
 
-Для каждого из заданий нужно создать папку и перейти в неё:
-```bash
-mkdir problem1 && cd problem1
-```
-
 Осталось создать файл `Main.java` и писать код:
 ```bash
 nvim Main.java
