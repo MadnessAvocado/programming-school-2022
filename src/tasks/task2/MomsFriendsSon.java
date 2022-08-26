@@ -1,8 +1,8 @@
 import java.util.Scanner;
-public class MomsFriendsSon(){
+public class MomsFriendsSon {
     public void doShopping(){
         boolean bread = this.getAnswerFromConsole("Are there a bread in a market? (Answer 'yes or 'no')");
-        boolean eggs = this.getAnswerFromConcole("Are there an eggs in a market? (Answer 'yes' or 'no')");
+        boolean eggs = this.getAnswerFromConsole("Are there an eggs in a market? (Answer 'yes' or 'no')");
         boolean milk = this.getAnswerFromConsole("Are there a milk in a market? (Answer 'yes' or 'no')");
 
         if (bread) {
@@ -28,16 +28,16 @@ public class MomsFriendsSon(){
         if (answer.equals("yes")) {
             return true;
         }
-        else if (answer.equals("no") {
+        else if (answer.equals("no")) {
             return false;
         }
         else {
-            System.out.println("Answer should be 'yes' or 'no'!);
+            System.out.println("Answer should be 'yes' or 'no'!");
             System.exit(1);
+            return false;
         }
-                        
     }
-    public void main() {
+    public static void main(String[] args) {
         MomsFriendsSon momsFriendsSon = new MomsFriendsSon();
         momsFriendsSon.doShopping();
     }
