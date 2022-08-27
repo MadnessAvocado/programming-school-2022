@@ -6,3 +6,4 @@
 1. [Hello, world!](./src/tasks/task1)
 1. [Типы данных и циклы](./src/tasks/task2)
 1. [Основы linux и git](./src/tasks/task3)
+1. [Создание проекта](./src/tasks/task4)
