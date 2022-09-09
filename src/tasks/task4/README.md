@@ -17,12 +17,12 @@ Gradle вообще очень мощный инструмент, но пока 
 
 ## Создание собственного пакета
 Теперь создайте ещё один пакет с названием `equation` в папке `main`. Добавьте в него класс `LinearEquationSolver`,
-в котором реализован один метод - `solve(dobule a, dobule b)`. Вот [справка]() по линейным уравнениям.
+в котором реализован один метод - `solve(double a, double b)`. Вот [справка](https://skysmart.ru/articles/mathematic/reshenie-prostyh-linejnyh-uravnenij) по линейным уравнениям.
 Вас интересуют уравнения вида `ax = -b`. Собственно их метод и должен решать.
 
 После вы можете смело добавить импорт в класс App:
 ```java
-import equation.LinearEquationSolver;
+import example.equation.LinearEquationSolver;
 ```
 
 Теперь вы можете использовать недавно созданный класс:
@@ -43,7 +43,7 @@ solver.solve(2, -4);
 решений в вещественных числах.
 
 Есть множество подходов:
-1. Вернуть `Dobule.POSITIVE_INFINITY`, но это не корректно
+1. Вернуть `Dobule.POSITIVE_INFINITY`, но это некорректно
 2. Кинуть ошибку, где сообщить о проблеме
 3. Вернуть [комплексное число](http://www.mathprofi.ru/kompleksnye_chisla_dlya_chainikov.html)
 
